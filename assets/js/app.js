@@ -22,13 +22,14 @@ const app = new Vue({
         // console.log(this);
         // console.log(response);
         // console.log(this.email);
-        this.email = response.data.response
-        if (this.email != this.emails) {
-          for(let k = 0; k <= 10; k++) {
+        this.email = response.data.response;
+
+        for (let k = 0; k <= 10; k++) {
+          if (this.email != this.emails) {
             this.emails.push(this.email);
+          } else {
+            return;
           }
-        } else {
-            return
         }
 
         console.log(this.emails);
