@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Poppins:wght@200;400;600;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+.emails{
+    width: 900px;
+    aspect-ratio: 1 / 0.5;
+    border: 2px solid blue;
+    margin: 4rem auto;
+    background-color: aliceblue;
+    border-radius: 3rem;
+}
+
+ul{
+    padding: 3rem;
+}
+
+ul > li{
+    list-style: none;
+    padding: 0.75rem;
+    text-align: center;
+    background-color: rgb(173, 228, 228);
+}
