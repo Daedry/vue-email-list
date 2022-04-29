@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Poppins:wght@200;400;600;900&display=swap");
 
+
 * {
   padding: 0;
   margin: 0;
@@ -10,7 +11,15 @@
 }
 
 body {
-  background-color: #1560bd;
+  /* background-color: #1560bd; */
+  background-image: radial-gradient(
+    circle,
+    #6f00ff 20%,
+    #8f00ff,
+    #1c39bb,
+    #120a8f,
+    #4b0082
+  );
 }
 
 h1 {
@@ -19,27 +28,109 @@ h1 {
 
 .emails {
   width: 750px;
-  height: 100vh;
-  margin: auto;
-  background-color: #32c6a6;
+  height: 98vh;
+  margin: 5px auto;
+  /* background-color: #32c6a6; */
+  background-image: radial-gradient(
+    circle,
+    #6f00ff 20%,
+    #8f00ff,
+    #1c39bb,
+    #120a8f,
+    #4b0082
+  );
   border-radius: 50%;
   padding: 2rem;
   overflow-y: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid blue;
+  border: 2px solid slateblue;
+  position: relative;
+  transition: all 1s;
 }
+
+.emails{
+    animation: anim 30s infinite;
+	background: radial-gradient(circle at 0% 0%, #1c39bb, #4b0082, slateblue);
+	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
+	box-shadow: 0 -2vmin 4vmin LightPink inset, 0 1vmin 4vmin MediumPurple inset,
+		0 -2vmin 7vmin #4b0082 inset;
+	/* content: ""; */
+	filter: drop-shadow(0 0 3vmin Thistle) drop-shadow(0 5vmin 4vmin Orchid)
+		drop-shadow(2vmin -2vmin 15vmin MediumSlateBlue)
+		drop-shadow(0 0 7vmin MediumOrchid);
+	
+}
+
+
+.emails:hover {
+  border: 8px solid slateblue;
+  box-shadow: inset 0px 00px 10px 10px #120a8f;
+}
+
+@keyframes anim {
+	0%,
+	100% {
+		border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
+		box-shadow: 0 -2vmin 4vmin LightPink inset, 0 -4vmin 4vmin MediumPurple inset,
+			0 -2vmin 7vmin purple inset;
+	}
+
+	10% {
+		border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+	}
+
+	20% {
+		border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+	}
+
+	30% {
+		border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
+		box-shadow: 0 -4vmin 8vmin hotpink inset, -1vmin -2vmin 6vmin LightPink inset,
+			-1vmin -2vmin 4vmin MediumPurple inset, 1vmin 4vmin 8vmin purple inset;
+	}
+
+	40% {
+		border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+	}
+
+	50% {
+		border-radius: 100%;
+		box-shadow: 0 4vmin 16vmin hotpink inset, 0 2vmin 5vmin LightPink inset, 0 4vmin 4vmin MediumPurple inset,
+			0 6vmin 8vmin purple inset;
+	}
+
+	60% {
+		border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
+	}
+
+	70% {
+		border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
+		box-shadow: 1vmin 1vmin 8vmin LightPink inset,
+			2vmin -1vmin 4vmin MediumPurple inset, -1vmin -1vmin 16vmin purple inset;
+	}
+
+	80% {
+		border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
+	}
+
+	90% {
+		border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+	}
+}
+
 
 ul {
   width: 60%;
   padding: 2rem;
   border: 2px solid blue;
   background-color: #265c50;
-  border-radius: 3rem;
+  /* border-radius: 3rem; */
+  border-radius: 60px 45px 30px 15px/15px 30px 45px 60px;
+  transform: skewY(3deg);
+  box-shadow: 20px 20px 2px 0px black;
 }
-
-
 
 ul > li {
   display: flex;
@@ -52,12 +143,133 @@ ul > li {
   background-color: #4169e1;
   border-left: 5px solid blue;
   border-right: 5px solid blue;
-
 }
 
 ul > li:hover {
   background-color: cornflowerblue;
   cursor: pointer;
   aspect-ratio: 1 / 0.2;
+  box-shadow: 0 0 10px 0 black;
 }
 
+.ball-left,
+.ball-right {
+  width: 50px;
+  height: 50px;
+  background-color: #265c50;
+  position: absolute;
+  /* border-radius: 0 50% 50% 50%; */
+  /* border-radius: 80% 0 55% 50% / 55% 0 80% 50%; */
+  border-radius: 0px 50% 50% 50%;
+  box-shadow: 0 0 10px 0 black;
+  border: 3px solid black;
+  animation-duration: .00001s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+
+.ball-left {
+  left: 3rem;
+  animation-name: left-turn;
+
+}
+
+@keyframes left-turn {
+  0% {
+    transform: rotate(0deg);
+    background-image: radial-gradient(
+      #6f00ff,
+      #8f00ff,
+      #1c39bb,
+      #120a8f,
+      #4b0082
+    );
+  }
+
+  100% {
+    transform: rotate(360deg);
+    background-image: radial-gradient(
+      #6f00ff,
+      #8f00ff,
+      #1c39bb,
+      #120a8f,
+      #4b0082
+    );
+  }
+}
+
+.ball-right {
+  right: 3rem;
+  animation-name: right-turn;
+  
+}
+
+@keyframes right-turn {
+  0% {
+    transform: rotate(360deg);
+    background-image: radial-gradient(
+      #6f00ff,
+      #8f00ff,
+      #1c39bb,
+      #120a8f,
+      #4b0082
+    );
+  }
+
+  100% {
+    transform: rotate(0deg);
+    background-image: radial-gradient(
+      #6f00ff,
+      #8f00ff,
+      #1c39bb,
+      #120a8f,
+      #4b0082
+    );
+  }
+}
+
+.ball-left > .atom-left,
+.ball-right > .atom-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem;
+  animation-duration: .7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  
+}
+
+.ball-right > .atom-right{
+    animation-name: atom_right;
+}
+
+.ball-left > .atom-left{
+    animation-name: atom_left;
+}
+
+@keyframes atom_left {
+    0% {
+        transform: rotate(360deg);
+        
+      }
+    
+      100% {
+        transform: rotate(0deg);
+       
+      }
+}
+
+@keyframes atom_right {
+    0% {
+        transform: rotate(0deg);
+        
+      }
+    
+      100% {
+        transform: rotate(360deg);
+       
+      }
+}

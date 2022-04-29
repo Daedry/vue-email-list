@@ -3,10 +3,9 @@ const app = new Vue({
   data: {
     email: "",
     emails: [],
-    success: '',
+    success: "",
   },
-  methods: {
-  },
+  methods: {},
   mounted() {
     for (let k = 1; k <= 10; k++) {
       axios
@@ -17,14 +16,13 @@ const app = new Vue({
           // console.log(this.email);
           this.email = response.data.response;
           this.success = response.data.success;
-          console.log(this.success, 'lol')
+          console.log(this.success);
 
           if (this.email[k] !== this.emails[k]) {
             this.emails.push(this.email);
           } else {
             return;
           }
-
         });
     }
     console.log(this.emails);
