@@ -3,6 +3,7 @@ const app = new Vue({
   data: {
     email: "",
     emails: [],
+    success: '',
   },
   methods: {
   },
@@ -15,6 +16,8 @@ const app = new Vue({
           // console.log(response);
           // console.log(this.email);
           this.email = response.data.response;
+          this.success = response.data.success;
+          console.log(this.success, 'lol')
 
           if (this.email[k] !== this.emails[k]) {
             this.emails.push(this.email);

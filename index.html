@@ -15,10 +15,12 @@
 <div id="app">
 
     <div class="emails">
-        <ul>
+        <ul v-if="emails.length == 10">
             <li><h1>10 email random</h1></li>
-            <li v-for="mail in emails">Email: {{ mail}}</li>
-
+            <li v-for="(mail, index) in emails">{{mail}}</li>
+        </ul>
+        <ul v-else>
+            <li><h2>There is no email </h2></li>
         </ul>
     </div>
 
