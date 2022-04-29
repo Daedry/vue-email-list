@@ -1,34 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Poppins:wght@200;400;600;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Poppins:wght@200;400;600;900&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    transition: 0.5s;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
+  transition: 0.7s;
 }
 
-body{
-    background-color: aquamarine;
+
+body {
+  background-color: #1560bd;
 }
 
-.emails{
-    width: 900px;
-    aspect-ratio: 1 / 0.5;
-    border: 2px solid blue;
-    margin: 4rem auto;
-    background-color: aliceblue;
-    border-radius: 3rem;
+h1 {
+  font-size: 20px;
 }
 
-ul{
-    padding: 3rem;
+.emails {
+  width: 750px;
+  height: 100vh;
+  margin: auto;
+  background-color: #32c6a6;
+  border-radius: 50%;
+  padding: 2rem;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+
 }
 
-ul > li{
-    list-style: none;
-    padding: 0.75rem;
-    text-align: center;
-    background-color: rgb(173, 228, 228);
+ul {
+  width: 60%;
+  padding: 2rem;
+  border: 2px solid blue;
+  background-color: #265c50;
+  border-radius: 3rem;
+}
+
+ul > li {
+  border-radius: 1rem;
+  list-style: none;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #4169e1;
+  border-left: 5px solid blue;
+  border-right: 5px solid blue;
+}
+
+ul > li:hover {
+  background-color: cornflowerblue;
+  cursor: pointer;
+}
+
+.unShow {
+  /* display: block; */
+  color: red;
 }

@@ -5,18 +5,9 @@ const app = new Vue({
     emails: [],
   },
   methods: {
-    // pushingEmails(email) {
-    //   for (let i = 1; i <= 10; i++) {
-    //     if (!this.emails.includes(email)) {
-    //       this.emails.push(email);
-    //     } else {
-    //       return;
-    //     }
-    //   }
-    // },
   },
   mounted() {
-    for (let k = 0; k <= 10; k++) {
+    for (let k = 1; k <= 10; k++) {
       axios
         .get("https://flynn.boolean.careers/exercises/api/random/mail")
         .then((response) => {
@@ -31,8 +22,8 @@ const app = new Vue({
             return;
           }
 
-          console.log(this.emails);
         });
     }
+    console.log(this.emails);
   },
 });
