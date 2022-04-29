@@ -25,7 +25,7 @@ const app = new Vue({
         this.email = response.data.response;
 
         for (let k = 0; k <= 10; k++) {
-          if (this.email != this.emails) {
+          if (this.email != this.emails[k]) {
             this.emails.push(this.email);
           } else {
             return;
