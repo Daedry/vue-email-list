@@ -163,7 +163,7 @@ ul > li:hover {
   border-radius: 0px 50% 50% 50%;
   box-shadow: 0 0 10px 0 black;
   border: 3px solid black;
-  animation-duration: .00001s;
+  animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
